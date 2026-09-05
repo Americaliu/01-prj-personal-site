@@ -5,7 +5,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #eef4f8, #dfe9f3);
     color: #333;
 }
 
@@ -15,14 +15,20 @@ body {
 -------------------------- */
 
 header {
-    background-color: #2c3e50;
+    background: linear-gradient(135deg, #1f3c5a, #4f6f8f);
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 60px 20px;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 40px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 
@@ -31,24 +37,22 @@ header h1 {
 -------------------------- */
 
 nav {
-    background-color: #34495e;
+    background-color: #162b40;
     text-align: center;
     padding: 15px;
+    position: sticky;
+    top: 0;
 }
 
-
-/* Style each navigation link */
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 0 15px;
     font-weight: bold;
 }
 
-
-/* Change appearance when mouse is over link */
 nav a:hover {
-    text-decoration: underline;
+    color: #9fd3ff;
 }
 
 
@@ -57,9 +61,9 @@ nav a:hover {
 -------------------------- */
 
 main {
-    width: 80%;
-    max-width: 900px;
-    margin: 30px auto;
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
 }
 
 
@@ -69,13 +73,20 @@ main {
 
 section {
     background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 6px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-    color: #2c3e50;
+    color: #1f3c5a;
+    border-bottom: 2px solid #d6e3ee;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #345b7e;
 }
 
 
@@ -83,17 +94,32 @@ h2 {
    Skills
 -------------------------- */
 
-.skill {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+#skills h2 {
+    width: 100%;
+}
 
-/* Change the appearance of the icons */
+.skill {
+    flex: 1 1 220px;
+    background-color: #f7fbff;
+    border: 1px solid #d9e6f2;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+}
+
 .skill .material-symbols-outlined {
-    font-size: 35px;
-    color: #2c3e50;
+    font-size: 42px;
+    color: #2b6d9b;
 }
 
 
@@ -102,18 +128,25 @@ h2 {
 -------------------------- */
 
 .project {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-top: 15px;
+    background-color: #f9fbfd;
+    border-left: 5px solid #4a7ba6;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .project a {
-    color: #0066cc;
+    display: inline-block;
+    margin-top: 8px;
+    color: white;
+    background-color: #2f5f87;
+    padding: 8px 14px;
     text-decoration: none;
+    border-radius: 6px;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    background-color: #1f4668;
 }
 
 
@@ -121,9 +154,19 @@ h2 {
    Contact
 -------------------------- */
 
-#contact .material-symbols-outlined {
-    vertical-align: middle;
-    margin-right: 5px;
+#contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#contact a {
+    color: #2f5f87;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 
@@ -132,8 +175,34 @@ h2 {
 -------------------------- */
 
 footer {
-    background-color: #2c3e50;
+    background-color: #162b40;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* -------------------------
+   Mobile View
+-------------------------- */
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 20px;
+    }
 }
